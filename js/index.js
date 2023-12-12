@@ -2,12 +2,15 @@
 document.querySelector('#btn-calcular').onclick = function calcularImc() {
     let altura = parseFloat(document.querySelector('#text-altura').value);
     let peso = parseFloat(document.querySelector('#text-peso').value);
-    let imc = (peso / (altura * altura)).toFixed(2);
-
-    document.querySelector('#resultado-imc').innerHTML = imc;
+    let imc = parseFloat(peso / (altura * altura)).toFixed(2);
+    // const animacao = document.querySelector('.my-element');
+    // element.classList.add('animate__animated', 'animate__bounceOutLeft');
+    
+    document.querySelector('#resultado-imc').innerHTML = `O seu IMC é: ${(imc)}`;
 
     if(imc < 18.5) {
         document.querySelector('#diagnostico').innerHTML = 'Abaixo do Peso!';
+        
     }else if(imc >= 18.5 && imc <= 24.99){
         document.querySelector('#diagnostico').innerHTML = 'Parabens, peso Ideal!';
     }else if(imc >= 25 && imc <= 29.99){
@@ -28,5 +31,5 @@ document.querySelector('#btn-reset').onclick = function limparDados() {
     document.querySelector('#resultado-imc').innerHTML = '';
     document.querySelector('#diagnostico').innerHTML = '';
     document.querySelector('#text-altura').value = '';
-    document.querySelector('#text-peso').value = '';
+    document.querySelector('#text-peso').value = '';    
 }

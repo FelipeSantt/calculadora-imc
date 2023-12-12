@@ -88,6 +88,14 @@ body {
 
 }
 
+.animate__animated.animate__bounceInDown {
+    animation-delay: 0.5s;
+}
+
+.animate__animated.animate__bounce {
+    animation-duration: 10s;
+}
+
 @media (max-width: 435px) {
     #main {
         width: 100%;
@@ -111,7 +119,7 @@ body {
 
     #diagnostico{
         width: 80%;
-        margin-top: 5px;
+        margin-top: 8px;
         font-size: 15px;
     }
 }
